@@ -34,7 +34,7 @@ func newApp(cmd *cobra.Command, args []string)  {
 	}
 
 	// check if the project existed
-	appPath := path + "/" + appName
+	appPath := path + appName
 	if utils.IsExist(appPath) {
 		color.Red("[Error]---project has already existed")
 		return
