@@ -1,0 +1,12 @@
+{
+    "log": {
+        "level": "Debug",
+        "dir": "./log",
+        "log_id_name": "_log_id"
+    },
+    "rotate": {
+        "file_suffix_format": ".%Y%m%d%H",
+        "rotate_time": "1h",
+        "reverse_time": "168h"
+    }
+}

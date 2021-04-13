@@ -1,0 +1,60 @@
+[global]
+# app 的名字
+app_name="qkgo-template"
+# 服务的端口号
+port="8888"
+# 监听的网络地址
+server="0.0.0.0"
+# 是否开启性能监控接口
+pprof=true
+# 性能接口为 /tools/pprof?token=xxxx
+token="test"
+
+[database]
+# 禁用表名复数
+singular_table=true
+# 是否打印执行的 sql
+log_mode=true
+# 最大连接数
+max_open_conn=100
+# 最大空闲连接数
+max_idle_conn=20
+# 目前只支持mysql,sqlite3,postgres
+engine="mysql"
+# sqlite3 似乎不需要账号密码host，port
+host="localhost"
+port="3306"
+user="USER_NAME"
+password="SECRET"
+# sqlite3 需要的是一个文件路径
+# 数据库名称
+dbname="DATABASE_NAME"
+# 参数详情参照 https://github.com/go-sql-driver/mysql#parameters
+mysqlParams="parseTime=True&charset=utf8mb4&loc=Local"
+# 数据库超时时间, 单位: "ms", "s", "m", "h"
+connect_timeout="1s"
+read_timeout="1s"
+write_timeout="1s"
+# postgres 需要 ssl_mode
+#ssl_mode="disable"
+
+[log]
+# 指定打印哪个级别及以上的日志
+# Debug / Info / Warning / Error / Panic / Fatal
+level="Debug"
+# 日志所在文件夹
+dir="./log"
+# logId 所在的 header 字段
+log_id_name="_log_id"
+
+[call]
+# http 请求的超时时间
+http_timeout=1000
+
+[rotate]
+# 切割的日志后缀
+file_suffix_format=".%Y%m%d%H"
+# 日志切割时间 h/m/s/ms/us/ns
+rotate_time="1h"
+# 日志保留时间 7d = 7 * 24h = 168h
+reverse_time="168h"

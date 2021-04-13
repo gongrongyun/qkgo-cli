@@ -1,0 +1,7 @@
+{
+    "app_name": "qkgo-template",
+    "port": "8888",
+    "server": "localhost",
+    "open_pprof": true,
+    "pprof_token": "test",
+}

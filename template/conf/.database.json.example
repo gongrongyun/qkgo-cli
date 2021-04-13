@@ -1,0 +1,16 @@
+{
+    "engine": "mysql",
+    "singular_table": true,
+    "log_mode": true,
+    "max_open_conn": 100,
+    "max_idle_conn": 20,
+    "host": "localhost",
+    "port": "3306",
+    "user": "USER_NAME",
+    "password": "SECRET",
+    "dbname": "DATABASE_NAME",
+    "mysqlParams": "parseTime=True&charset=utf8mb4&loc=Local",
+    "connect_timeout": "1s",
+    "read_timeout": "1s",
+    "write_timeout": "1s"
+}
