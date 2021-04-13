@@ -1,7 +1,7 @@
 package middleware
 
 import (
-	"github.com/gongrongyun/qkgo-cli/template/boot/http"
+	"template/boot/http"
 	"bytes"
 	"fmt"
 	"github.com/gin-gonic/gin"

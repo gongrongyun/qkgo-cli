@@ -1,6 +1,6 @@
 [global]
 # app 的名字
-app_name="github.com/gongrongyun/qkgo-cli/template"
+app_name="template"
 # 服务的端口号
 port="8888"
 # 监听的网络地址

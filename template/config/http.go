@@ -2,7 +2,7 @@ package config
 
 import (
 	"fmt"
-	"github.com/gongrongyun/qkgo-cli/template/boot/config"
+	"template/boot/config"
 )
 
 const (

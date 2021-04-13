@@ -1,10 +1,10 @@
 package middleware
 
 import (
-	"github.com/gongrongyun/qkgo-cli/template/boot/logger"
-	"github.com/gongrongyun/qkgo-cli/template/boot/timer"
-	"github.com/gongrongyun/qkgo-cli/template/boot/trace"
-	"github.com/gongrongyun/qkgo-cli/template/utils"
+	"template/boot/logger"
+	"template/boot/timer"
+	"template/boot/trace"
+	"template/utils"
 	"fmt"
 	"github.com/gin-gonic/gin"
 	"strconv"

@@ -2,11 +2,11 @@ package new
 
 import (
 	"github.com/fatih/color"
+	"github.com/gongrongyun/qkgo-cli/static"
 	"github.com/gongrongyun/qkgo-cli/utils"
 	"github.com/spf13/cobra"
 	"io/ioutil"
 	"os"
-	"path/filepath"
 	"strings"
 )
 
@@ -19,12 +19,15 @@ var Command = &cobra.Command{
 }
 
 const (
-	oldProjectName = "github.com/gongrongyun/qkgo-cli/template"
-	oldPackageName = "template"
+	oldProjectName = "template"
+)
+
+var (
+	appName string
 )
 
 func newApp(cmd *cobra.Command, args []string)  {
-	appName := args[0]
+	appName = args[0]
 	path, err := cmd.Flags().GetString("path")
 	if err != nil {
 		path = "./"
@@ -46,41 +49,51 @@ func newApp(cmd *cobra.Command, args []string)  {
 
 	color.Yellow("creating project" + appName + "......")
 
-	err = filepath.Walk("./template", func(path string, info os.FileInfo, err error) error {
-		if err != nil {
-			return err
-		}
-		path = utils.SlicePath(path, "template")
-		templateCurPath := "./template/" + path
-		appCurPath := appPath + "/" + path
-
-		if utils.IsDir(templateCurPath) {
-			if err = os.Mkdir(appCurPath, 0755); err != nil {
-				return err
-			}
-		} else {
-			text, err := ioutil.ReadFile(templateCurPath)
-			var copyText string
-			if path == "main.go" {
-				copyText = strings.Replace(string(text), oldPackageName, "main", 1)
-			}
-			copyText = strings.Replace(string(text), oldProjectName, appName, -1)
-			err = ioutil.WriteFile(appCurPath, []byte(copyText), 0755)
-			if err != nil {
-				return err
-			} else {
-				color.Yellow("created file %v", path)
-			}
-		}
-
-		return nil
-	})
+	err = deepClone(appPath, "template")
 	if err != nil {
+		_ = os.Remove(appPath)
 		color.Red("[Error]---fail to create template files; err=[%v]", err)
 		return
 	}
 
 	color.Green("successfully create your project!\nplease read the README.md carefully and start your travel!")
+}
+
+func deepClone(curAppPath string, dir string) error {
+	if isDir(dir) {
+		err := os.Mkdir(curAppPath, 0755)
+		files, err := static.AssetDir(dir)
+		if err != nil {
+			return err
+		}
+		for _, file := range files {
+			err = deepClone(curAppPath + "/" + file, dir + "/" + file)
+			if err != nil {
+				return err
+			}
+		}
+	} else {
+		bytes, err := static.Asset(dir)
+		if err != nil {
+			return err
+		}
+		text := strings.Replace(string(bytes), oldProjectName, appName, -1)
+		err = ioutil.WriteFile(curAppPath, []byte(text), 0755)
+		if err != nil {
+			return err
+		}
+		color.Yellow("create " + curAppPath + " successfully!")
+	}
+
+	return nil
+}
+
+func isDir(path string) bool {
+	_, err := static.AssetDir(path)
+	if err != nil {
+		return false
+	}
+	return true
 }
 
 func init()  {

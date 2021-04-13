@@ -1,4 +1,4 @@
-module github.com/gongrongyun/qkgo-cli/template
+module template
 
 go 1.12
 

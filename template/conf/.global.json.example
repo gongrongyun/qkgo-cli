@@ -1,7 +1,7 @@
 {
-    "app_name": "github.com/gongrongyun/qkgo-cli/template",
+    "app_name": "template",
     "port": "8888",
     "server": "localhost",
     "open_pprof": true,
-    "pprof_token": "test",
+    "pprof_token": "test"
 }

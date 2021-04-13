@@ -1,7 +1,7 @@
 package rotateFile
 
 import (
-	"github.com/gongrongyun/qkgo-cli/template/boot/config"
+	"template/boot/config"
 	"fmt"
 	rotatelogs "github.com/lestrrat-go/file-rotatelogs"
 	"time"

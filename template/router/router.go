@@ -1,11 +1,11 @@
-package route
+package router
 
 import (
-	"github.com/gongrongyun/qkgo-cli/template/boot/http"
-	"github.com/gongrongyun/qkgo-cli/template/controller/version"
+	"template/boot/http"
+	"template/controller/version"
 )
 
-func init()  {
+func Init()  {
 	AddStaticRoute()
 	AddRouter()
 }

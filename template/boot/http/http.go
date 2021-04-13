@@ -4,8 +4,8 @@ import (
 	"fmt"
 	"github.com/gin-contrib/pprof"
 	"github.com/gin-gonic/gin"
-	"github.com/gongrongyun/qkgo-cli/template/boot/config"
-	"github.com/gongrongyun/qkgo-cli/template/utils"
+	"template/boot/config"
+	"template/utils"
 )
 
 var http *Http

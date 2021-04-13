@@ -13,7 +13,7 @@
 
 1. 进入到`conf`文件夹中（MacOS, Linux执行以下命令，Windows将`cp`更改为`copy`）
 ```bash
-    cp .database.json.example database.json
+    cp database.json.example database.json
     cp .global.json.example global.json
     cp .http.json.example http.json
     cp .log.json.example log.json
