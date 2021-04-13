@@ -2,7 +2,7 @@ package config
 
 import (
 	"fmt"
-	"template/boot/config"
+	"github.com/gongrongyun/qkgo-cli/template/boot/config"
 	"time"
 )
 

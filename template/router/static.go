@@ -1,7 +1,7 @@
 package route
 
 import (
-	"template/boot/http"
+	"github.com/gongrongyun/qkgo-cli/template/boot/http"
 )
 
 // Change the relativePath according to your demand

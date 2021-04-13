@@ -5,6 +5,8 @@ import (
 	_ "github.com/gongrongyun/qkgo-cli/template"
 )
 
+
+
 func main()  {
 	cmd.Execute()
 }

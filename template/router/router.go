@@ -1,8 +1,8 @@
 package route
 
 import (
-	"template/boot/http"
-	"template/controller/version"
+	"github.com/gongrongyun/qkgo-cli/template/boot/http"
+	"github.com/gongrongyun/qkgo-cli/template/controller/version"
 )
 
 func init()  {

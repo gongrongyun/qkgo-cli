@@ -1,7 +1,7 @@
 package orm
 
 import (
-	"template/boot/config"
+	"github.com/gongrongyun/qkgo-cli/template/boot/config"
 	"fmt"
 	"github.com/jinzhu/gorm"
 	_ "github.com/jinzhu/gorm/dialects/mysql"

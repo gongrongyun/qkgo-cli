@@ -1,7 +1,7 @@
 package trace
 
 import (
-	"template/boot/config"
+	"github.com/gongrongyun/qkgo-cli/template/boot/config"
 	"github.com/gin-gonic/gin"
 	uuid "github.com/satori/go.uuid"
 )
