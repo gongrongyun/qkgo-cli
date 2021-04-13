@@ -1,8 +1,8 @@
 package config
 
 import (
-	"qkgo-template/boot/config"
 	"fmt"
+	"template/boot/config"
 	"time"
 )
 

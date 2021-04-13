@@ -1,7 +1,7 @@
 package logger
 
 import (
-"qkgo-template/boot/trace"
+"template/boot/trace"
 "fmt"
 "github.com/gin-gonic/gin"
 "strings"

@@ -1,11 +1,11 @@
 package http
 
 import (
-	"qkgo-template/boot/config"
-	"qkgo-template/utils"
 	"fmt"
 	"github.com/gin-contrib/pprof"
 	"github.com/gin-gonic/gin"
+	"template/boot/config"
+	"template/utils"
 )
 
 var http *Http

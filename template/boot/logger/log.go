@@ -1,8 +1,8 @@
 package logger
 
 import (
-	"qkgo-template/boot/config"
-	"qkgo-template/boot/rotateFile"
+	"template/boot/config"
+	"template/boot/rotateFile"
 	"fmt"
 	"github.com/sirupsen/logrus"
 	"os"

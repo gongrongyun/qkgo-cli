@@ -1,8 +1,8 @@
 package route
 
 import (
-	"qkgo-template/boot/http"
-	"qkgo-template/controller/version"
+	"template/boot/http"
+	"template/controller/version"
 )
 
 func init()  {

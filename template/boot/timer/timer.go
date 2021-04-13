@@ -1,7 +1,7 @@
 package timer
 
 import (
-	"qkgo-template/boot/logger"
+	"template/boot/logger"
 	"fmt"
 	"github.com/gin-gonic/gin"
 	"strings"

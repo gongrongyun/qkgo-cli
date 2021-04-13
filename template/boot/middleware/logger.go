@@ -1,10 +1,10 @@
 package middleware
 
 import (
-	"qkgo-template/boot/logger"
-	"qkgo-template/boot/timer"
-	"qkgo-template/boot/trace"
-	"qkgo-template/utils"
+	"template/boot/logger"
+	"template/boot/timer"
+	"template/boot/trace"
+	"template/utils"
 	"fmt"
 	"github.com/gin-gonic/gin"
 	"strconv"

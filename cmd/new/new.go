@@ -19,7 +19,7 @@ var Command = &cobra.Command{
 }
 
 const (
-	oldProjectName = "qkgo-template"
+	oldProjectName = "template"
 )
 
 func newApp(cmd *cobra.Command, args []string)  {
@@ -59,7 +59,11 @@ func newApp(cmd *cobra.Command, args []string)  {
 			}
 		} else {
 			text, err := ioutil.ReadFile(templateCurPath)
-			copyText := strings.Replace(string(text), oldProjectName, appName, -1)
+			var copyText string
+			if path == "main.go" {
+				copyText = strings.Replace(string(text), oldProjectName, "main", 1)
+			}
+			copyText = strings.Replace(string(text), oldProjectName, appName, -1)
 			err = ioutil.WriteFile(appCurPath, []byte(copyText), 0755)
 			if err != nil {
 				return err

@@ -1,12 +1,12 @@
-package main
+package template
 
 import (
-	"qkgo-template/boot/http"
-	"qkgo-template/boot/logger"
-	mw "qkgo-template/boot/middleware"
-	"qkgo-template/boot/orm"
-	_ "qkgo-template/config"
-	_ "qkgo-template/router"
+	"template/boot/http"
+	"template/boot/logger"
+	mw "template/boot/middleware"
+	"template/boot/orm"
+	_ "template/config"
+	_ "template/router"
 )
 
 func _init() {
