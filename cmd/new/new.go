@@ -45,9 +45,7 @@ func newApp(cmd *cobra.Command, args []string)  {
 
 	color.Yellow("creating project" + appName + "......")
 
-	pwd, _ := os.Getwd()
-
-	err = filepath.Walk(pwd + "/template", func(path string, info os.FileInfo, err error) error {
+	err = filepath.Walk("./template", func(path string, info os.FileInfo, err error) error {
 		if err != nil {
 			return err
 		}
